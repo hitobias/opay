@@ -14,6 +14,7 @@ class Opay
         $this->instance->HashKey = config('opay.HashKey');
         $this->instance->HashIV = config('opay.HashIV');
         $this->instance->MerchantID = config('opay.MerchantID');
+        $this->instance->EncryptType = OpayEncryptType::ENC_SHA256;
     }
 
     public function instance()
