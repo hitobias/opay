@@ -10,17 +10,21 @@ class OpayServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../config/opay.php' => config_path('opay.php'),
-        ], 'opay_config');
+        ]);
     }
 
     public function register()
     {
-        // load config
+          //Config
         $this->mergeConfigFrom(__DIR__ . '/../config/opay.php', 'opay');
 
-        // Facade Custom class
-        $this->app['opay'] = $this->app->share(function ($app) {
+        $this->app->singleton('opay', function() {
             return new Opay;
         });
+    }
+
+    public function providers()
+    {
+        return ['opay'];
     }
 }

@@ -21,4 +21,9 @@ class Opay
         return $this->instance;
     }
 
+     public function i()
+    {
+        return $this->instance;
+    }
+
 }
