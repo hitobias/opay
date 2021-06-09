@@ -8,7 +8,7 @@ class Opay
 
     public function __construct()
     {
-        $this->instance = new \AllInOne();
+        $this->instance = new OpayAllInOne();
 
         $this->instance->ServiceURL = config('opay.ServiceURL');
         $this->instance->HashKey = config('opay.HashKey');
