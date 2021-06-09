@@ -1,5 +1,5 @@
-
 <?php
+
 namespace Hitobias\Opay\Facade;
 
 use Illuminate\Support\Facades\Facade;
